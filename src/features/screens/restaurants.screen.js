@@ -5,19 +5,19 @@ import styled from "styled-components/native";
 
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 
-const RestaurantScreenArea = styled.SafeAreaView`
+const SafeArea = styled.SafeAreaView`
   flex: 1;
-  margin-top: ${StatusBar.currentHeight}px;
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px;`}
 `;
 
-const RestaurantSearchArea = styled.View`
-  padding: 16px;
+const SearchContainer = styled.View`
+  padding: ${(props) => props.theme.space[3]};
 `;
 
-const RestaurantsList = styled.View`
+const RestaurantsListContainer = styled.View`
   flex: 1;
-  padding: 16px;
-  background-color: blue;
+  padding: ${(props) => props.theme.space[3]};
+  background-color: ${(props) => props.theme.colors.bg.secondary};
 `;
 
 export const RestaurantsScreen = () => {
@@ -29,18 +29,18 @@ export const RestaurantsScreen = () => {
   };
 
   return (
-    <RestaurantScreenArea>
-      <RestaurantSearchArea>
+    <SafeArea>
+      <SearchContainer>
         <Searchbar
           placeholder="Search"
           onChangeText={onChangeSearch}
           value={searchQuery}
         />
-      </RestaurantSearchArea>
+      </SearchContainer>
 
-      <RestaurantsList>
+      <RestaurantsListContainer>
         <RestaurantInfoCard />
-      </RestaurantsList>
-    </RestaurantScreenArea>
+      </RestaurantsListContainer>
+    </SafeArea>
   );
 };
