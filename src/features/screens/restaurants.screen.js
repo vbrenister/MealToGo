@@ -42,8 +42,8 @@ export const RestaurantsScreen = () => {
           { name: 7 },
           { name: 8 },
         ]}
-        renderItem={() => (
-          <Spacer position="bottom" size="large">
+        renderItem={(item) => (
+          <Spacer position="bottom" size="large" key={item.name}>
             <RestaurantInfoCard />
           </Spacer>
         )}
