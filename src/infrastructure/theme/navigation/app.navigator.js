@@ -48,7 +48,7 @@ export const AppNavigator = () => {
           headerShown: false,
         })}
       >
-        <Tab.Screen name="RestaurantsScreen" component={RestaurantsNavigator} />
+        <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
         <Tab.Screen name="Map" component={MapScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
