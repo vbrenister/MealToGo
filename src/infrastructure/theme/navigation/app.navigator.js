@@ -1,6 +1,5 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { RestaurantsScreen } from "../../../features/screens/restaurants.screen";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 import { RestaurantsNavigator } from "./restaurants.navigator";
@@ -49,7 +48,7 @@ export const AppNavigator = () => {
           headerShown: false,
         })}
       >
-        <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
+        <Tab.Screen name="RestaurantsScreen" component={RestaurantsNavigator} />
         <Tab.Screen name="Map" component={MapScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>

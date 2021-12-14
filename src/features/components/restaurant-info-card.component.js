@@ -28,8 +28,6 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     placeId,
   } = restaurant;
 
-  console.log(rating);
-
   let ratingArray;
 
   if (rating) {
