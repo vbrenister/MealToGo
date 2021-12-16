@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 
 import { TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
-import { Spacer } from "../../components/spacer/spacer.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
 import { ActivityIndicator, Colors } from "react-native-paper";
 
-import { RestaurantsContext } from "../../services/restaurants/restaurants.context";
+import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
-import { SafeArea } from "../../components/utility/safe-area.component";
+import { SafeArea } from "../../../components/utility/safe-area.component";
 import { Search } from "../components/search.component";
 
 const RestaurantList = styled.FlatList.attrs({
